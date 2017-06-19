@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	background-color: transparent;
+}
+
+body article {
+	font-size: 18px;
+}
+
+body article blockquote {
+	margin-left: 0px;
+}
+
+article blockquote p:before {
+	font-size: 60px;
+	font-family: Georgia;
+	font-weight: bold;
+	opacity: 0.4;
+	top: 10px;
+	left: -70px;
+}
+
+body article blockquote h4 {
+	text-align: right;
+}
+
+body article blockquote h4:before {
+	content: " - ";
+}
+
+body .description {
+	font-size: 18px;
+}
+
+body .lb-gallery {
+	margin-left: 0px;
+}
+
+body .lb-timeline {
+	border-top: 0px;
+}
+
+body .lb-posts .lb-post {
+	padding-left: 140px;
+}
+
+body .lb-posts .lb-mainitem-play-by-play_commentary, body .lb-posts .lb-mainitem-scorecard_with {
+	padding-left: 0px;
+}
+
+body .lb-post {
+	padding: 40px 0px;
+	border-bottom: 1px solid #eee;
+}
+
+body .item--embed__title {
+	margin-bottom: 0px;
+}
+
+body .item--embed__title a {
+	font-weight: 400;
+	text-decoration: none;
+}
+
+body .item--embed__description {
+	padding-top: 4px;
+}
+
+body .lb-timeline__header {
+	padding: 0px;
+}
+
+body .pin-posts .lb-post {
+	background: transparent;
+}
+
+body .pin-drawer {
+	background: transparent;
+}
+
+body .pin-drawer-info {
+	font-size: 13px;
+	font-weight: 400;
+	color: #333;
+	padding: 5px 0px;
+	margin: 0px;
+}
+
+body .pin-drawer-button {
+	width: 68px;
+	height: auto;
+	margin-top: -8px;
+	margin-left: -34px;
+	box-shadow: none;
+}
+
+body .pin-drawer-button i {
+	font-size: 28px;
+	color: #d5d5d5;
+}
+
+body .lb-author__avatar {
+	display: none;
+}
+
+body .show-author-avatar .lb-author {
+	display: none;
+}
+
+body .show-author-avatar .lb-author, .show-author-avatar .lb-item {
+	margin-left: 0px;
+}
+
+body .header-bar {
+	background: transparent;
+    border-top: none;
+    border-bottom: 1px solid #eee;
+    margin-top: 40px;
+    padding: 10px 0px 10px 0px;
+}
+
+body .sorting-bar__order--active, .sorting-bar__order:hover {
+	border-bottom: 1px solid #333;
+	padding-bottom: 0px;
+}
+
+body .sorting-bar__order {
+	margin: 0px 20px;
+}
+
+body .sorting-bar__title, body .sorting-bar__order {
+	font-size: 18px;
+	color: #333;
+	text-transform: initial;
+}
+
+/* Custom post css */
+
+body .scorecard-top span.team-score {
+	font-size: 90px;
+	font-weight: 700;
+}
+
+body .team-score-colon {
+	margin: 0px 5px;
+}
+
+body .scorecard-top span.team-name {
+	font-size: 34px;
+	font-weight: 700;
+	margin-top: 0px;
+}
+
+body .scorecard-top .scorecard-top__scorers {
+	font-size: 16px;
+}
+
+body .scorecard-top .scorecard-top__scorers li {
+	margin-bottom: 2px;
+}
+
+body .scorecard-top__info {
+	font-size: 16px;
+	opacity: 0.6;
+	margin-top: 10px;
+}
+
+body .commentary__minuteInput {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+body .commentary__textInput, body .commentary__icon {
+	padding-left: 40px;
+}
+
+body .statPerc__resultWrap {
+	display: flex;
+	flex-direction: column;
+}
+
+body .statPerc__resultBarWrap {
+	margin: 15px 0px 10px 0px;
+	order: 1;
+}
+
+body .statPerc__resultScore {
+	font-size: 24px;
+	order: 0;
+}
+
+body .statPerc__nameInput {
+	font-weight: 400;
+}
+
+@media (max-width: 650px) {
+	body lb-dropdown>div>div.dropdown-display>span, body lb-dropdown>div>div.dropdown-list>div>div {
+		font-size: 14px;
+	}
+	body .item--embed__illustration {
+		margin-right: 0px;
+	}
+	body .lb-posts .lb-post {
+		padding-left: 0px;
+	}
+	body .scorecard-top span.team-score {
+		font-size: 48px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	body .scorecard-top .scorecard-top__scorers {
+		display: none;
+	}
+	body .scorecard-top span.team-name {
+		font-size: 24px;
+	}
+	body .scorecard-top__info {
+		font-size: 14px;
+		text-align: center;
+	    align-items: center;
+	}
+	body .commentary__item {
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+	body .commentary__icon, body .commentary__textInput {
+		padding: 0px;
+	}
+	body .commentary__icon {
+		margin: 5px 0px;
+	}
+}
