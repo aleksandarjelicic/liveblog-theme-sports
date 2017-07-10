@@ -12,30 +12,6 @@
         </div>
         <p class="description" ng-if="timeline.settings.showDescription" ng-bind-html="timeline.blog.descriptionHtml"></p>
     </div>
-
-    <div ng-if="!timeline.settings.livestream">
-        <lb-posts
-            ng-if='!timeline.stickyPagesManager.hideSticky'
-            timeline="timeline"
-            posts="timeline.stickyPagesManager.allPosts"
-            class="pin-posts" ng-cloak></lb-posts>
-
-        <div ng-if="timeline.stickyPagesManager.allPosts().length && !timeline.loading"
-            class="pin-drawer" ng-cloak>
-            
-            <div class="pin-drawer-info"
-                 ng-if="timeline.stickyPagesManager.hideSticky"
-                 translate translate-n="timeline.stickyPagesManager.allPosts().length"
-                 translate-plural="{{$count}} pinned posts">
-                One pinned post
-            </div>
-            <button class="pin-drawer-button" ng-class="{'chevron-active': timeline.stickyPagesManager.hideSticky}"
-            ng-click="timeline.stickyPagesManager.hideSticky = !timeline.stickyPagesManager.hideSticky">
-                <i class="icon-chevron-up"></i>
-            </button>
-        </div>
-    </div>
-
     <div ng-if="timeline.settings.livestream" class="livestream">
         <lb-posts
             ng-if='!timeline.stickyPagesManager.hideSticky'
@@ -55,11 +31,11 @@
                 <div
                     class="sorting-bar__order"
                     ng-class="{'sorting-bar__order--active': timeline.pagesManager.order()=='newest_first'}"
-                    ng-click="timeline.orderBy('newest_first')" translate>Newest</div>
+                    ng-click="timeline.orderBy('newest_first')" translate>Newest first</div>
                 <div
                     class="sorting-bar__order"
                     ng-class="{'sorting-bar__order--active': timeline.pagesManager.order()=='oldest_first'}"
-                    ng-click="timeline.orderBy('oldest_first')" translate>Oldest</div>
+                    ng-click="timeline.orderBy('oldest_first')" translate>Oldest first</div>
             </div>
             <div class="sorting-bar__orders-mobile">
                 <lb-dropdown placeholder="{{ 'Sort by:' | translate }}" list="timeline.sortOptions"
@@ -110,7 +86,28 @@
                  translate-plural="See {{$count}} new updates" ng-cloak>
                 See one new update
             </div>
-            
+            <div ng-if="!timeline.settings.livestream">
+                <lb-posts
+                    ng-if='!timeline.stickyPagesManager.hideSticky'
+                    timeline="timeline"
+                    posts="timeline.stickyPagesManager.allPosts"
+                    class="pin-posts" ng-cloak></lb-posts>
+
+                <div ng-if="timeline.stickyPagesManager.allPosts().length && !timeline.loading"
+                    class="pin-drawer" ng-cloak>
+                    
+                    <div class="pin-drawer-info"
+                         ng-if="timeline.stickyPagesManager.hideSticky"
+                         translate translate-n="timeline.stickyPagesManager.allPosts().length"
+                         translate-plural="{{$count}} pinned posts">
+                        One pinned post
+                    </div>
+                    <button class="pin-drawer-button" ng-class="{'chevron-active': timeline.stickyPagesManager.hideSticky}"
+                    ng-click="timeline.stickyPagesManager.hideSticky = !timeline.stickyPagesManager.hideSticky">
+                        <i class="icon-chevron-up"></i>
+                    </button>
+                </div>
+            </div>
             <lb-posts
                 timeline="timeline"
                 enhance="timeline.enhance"
